@@ -45,6 +45,8 @@ This repository includes implementations of both the **MIP-based optimization** 
 
 ### 1. Setup
 
+Make sure to download Spider and BIRD datasets here: [Google drive folder](https://drive.google.com/drive/folders/1PtLan7Guu98J42lqCxhZZc-EyZpvwWVk?usp=sharing).
+
 To execute the MIP program (`ilp.py`), we recommend installing the [Gurobi solver](https://docs.python-mip.com/en/latest/install.html#gurobi-installation-and-configuration-optional) for significantly faster optimization.
 
 Pre-computed **table compatibility scores** and **query decomposition data** for *Spider* and *Bird* are typically stored under `data/`.  
