@@ -10,6 +10,10 @@ This repository contains the code for **Greedy Join-Aware Multi-Table Retrieval*
 
 Our work introduces a fast, **iterative search** approach to multi-table retrieval, providing a scalable alternative to the computationally intensive **Mixed-Integer Programming (MIP)** formulation of the original **Join-Aware Retrieval (JAR)** method.
 
+Paper: https://openreview.net/pdf?id=d64whXpOgf
+
+Data: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17817912.svg)](https://doi.org/10.5281/zenodo.17817912)
+
 ---
 
 ## 🧩 Multi-Table Retrieval Components
