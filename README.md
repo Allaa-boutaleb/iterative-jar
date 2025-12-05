@@ -2,26 +2,13 @@
 
 This repository contains the code for **Greedy Join-Aware Multi-Table Retrieval**, as proposed in the paper:
 
-> **Exploring Multi-Table Retrieval Through Iterative Search**  
-> *(Anonymous Author(s))*
+> **Exploring Multi-Table Retrieval Through Iterative Search**
+> 
+> *Allaa Boutaleb, Bernd Amann, Rafael Angarita, Hubert Naacke*
+> 
+> Presented during the AI for Tabular Data Workshop (AITD) @ EurIPS 2025, Copenhagen, Denmark. 
 
 Our work introduces a fast, **iterative search** approach to multi-table retrieval, providing a scalable alternative to the computationally intensive **Mixed-Integer Programming (MIP)** formulation of the original **Join-Aware Retrieval (JAR)** method.
-
----
-
-## 📄 Original JAR Citation (MIP-Based Baseline)
-
-This project is a **fork** of the repository for the **Join-Aware Retrieval (JAR)** method.  
-If you use the `ilp.py` script or foundational components from the original work, please cite:
-
-```bibtex
-@article{chen2024table,
-  title={Is Table Retrieval a Solved Problem? Join-Aware Multi-Table Retrieval},
-  author={Chen, Peter Baile and Zhang, Yi and Roth, Dan},
-  journal={arXiv preprint arXiv:2404.09889},
-  year={2024}
-}
-```
 
 ---
 
@@ -45,7 +32,8 @@ This repository includes implementations of both the **MIP-based optimization** 
 
 ### 1. Setup
 
-Make sure to download Spider and BIRD datasets here: [Google drive folder](https://drive.google.com/drive/folders/1PtLan7Guu98J42lqCxhZZc-EyZpvwWVk?usp=sharing).
+Make sure to download the datasets from here: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17817912.svg)](https://doi.org/10.5281/zenodo.17817912)
+Once downloaded, extract the `.tar.gz` files in the `data/` folder. 
 
 To execute the MIP program (`ilp.py`), we recommend installing the [Gurobi solver](https://docs.python-mip.com/en/latest/install.html#gurobi-installation-and-configuration-optional) for significantly faster optimization.
 
@@ -88,7 +76,7 @@ python greedy.py --dataset spider --K 5 --topk 20 \
 | `--topk` | Size of the initial candidate pool (Top-K from Contriever) | 20 |
 | `--lambda_cov` | Weight for Marginal Coverage Gain \( G_{cov} \) | 2.0 |
 | `--lambda_join` | Weight for Marginal Join Gain \( G_{join} \) | 1.0 |
-| `--lambda_coarse` | Weight for Coarse Relevance Gain \( G_{coarse} \) | 3.0 |
+| `--lambda_coarse` | Weight for Coarse Relevance Gain \( G_{coarse} \) | 4.0 |
 
 ---
 
@@ -100,11 +88,41 @@ Run the original one-shot MIP optimization approach:
 # Example for parallel execution
 python ilp.py -p 0 & python ilp.py -p 1 & ...
 ```
+---
+
+## Citation
+
+Please cite our work using the following citation:
+
+```bibtex
+@inproceedings{
+boutaleb2025exploring,
+title={Exploring Multi-Table Retrieval Through Iterative Search},
+author={Allaa Boutaleb and Bernd Amann and Rafael Angarita and Hubert Naacke},
+booktitle={EurIPS 2025 Workshop: AI for Tabular Data},
+year={2025},
+url={https://openreview.net/forum?id=d64whXpOgf}
+}
+```
 
 ---
 
 ## 📫 Contact
 
-For questions or feedback, please reach out via the repository’s issue tracker or contact the author(s) directly.
+For questions or feedback, please reach out via the repository’s issue tracker or contact me directly at [allaa.boutaleb@lip6.fr](mailto:allaa.boutaleb@lip6.fr).
 
 ---
+
+## 📄 Original JAR Citation (MIP-Based Baseline)
+
+This project is a **fork** of the repository for the **Join-Aware Retrieval (JAR)** method.  
+If you use the `ilp.py` script or foundational components from the original work, please cite:
+
+```bibtex
+@article{chen2024table,
+  title={Is Table Retrieval a Solved Problem? Join-Aware Multi-Table Retrieval},
+  author={Chen, Peter Baile and Zhang, Yi and Roth, Dan},
+  journal={arXiv preprint arXiv:2404.09889},
+  year={2024}
+}
+```
