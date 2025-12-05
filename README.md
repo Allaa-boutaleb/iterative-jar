@@ -1,4 +1,4 @@
-# 🫙 Exploring Multi-Table Retrieval Through Iterative Search
+# Exploring Multi-Table Retrieval Through Iterative Search
 
 This repository contains the code for **Greedy Join-Aware Multi-Table Retrieval**, as proposed in the paper:
 
